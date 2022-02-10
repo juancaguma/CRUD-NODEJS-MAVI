@@ -1,0 +1,22 @@
+Token de prueba dura 24 horas apartir de las 9 pm del 09/02/2022
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoyNjA4OTYsImlhdCI6MTY0NDQ2MjM1MiwiZXhwIjoxNjQ0NTQ4NzUyfQ.eQGraWPbAi4i38172pLNWrslRqzItH3zFucimc3WN_E
+
+
+
+
+Estructura de la tabla mysql
+nombre de la base de datos crud_node
+
+
+CREATE DATABASE `crud_node` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id autoincremental unico',
+  `nombre` varchar(50) NOT NULL COMMENT 'Nombre del cliente',
+  `ape_paterno` varchar(70) NOT NULL COMMENT 'Apellido paterno del cliente',
+  `ape_materno` varchar(70) NOT NULL COMMENT 'Apellido materno del cliente',
+  `domicilio` varchar(200) NOT NULL COMMENT 'Domicilio del cliente',
+  `email` varchar(150) NOT NULL COMMENT 'Email del Cliente',
+  `borrado` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
