@@ -5,9 +5,7 @@ const pool= mysql2.createPool(database);
 
 pool.getConnection((err,connection)=>{
     if (err) {
-        console.error('ERROR');
-        console.error(err.code);
-        console.log(err);
+        console.error('ERROR', err);
     }else{
         connection.release();
         console.log('Conexion exitosa a la BD-mysql');
