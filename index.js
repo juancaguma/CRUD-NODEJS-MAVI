@@ -6,6 +6,7 @@ const helmet   = require('helmet');
 const compress = require('compression');  
 //Asignar parte del body al req.body
 const bodyParser = require('body-parser');  
+const cowsay = require('cowsay');  
 //Acceder a las variables de entorno del archivo .env
 require('dotenv').config();   
 
@@ -29,5 +30,9 @@ app.use('/crud', require('./rutas/crud'));
 const puerto = process.env.PORT || 3000;
 http.listen(puerto, (err) => {
     if (err) throw new Error(err);
-    console.log('Servidor arriba en el puerto:', puerto);
+    console.log(cowsay.say({
+    text : `Servidor arriba en el puerto: ${puerto}`,
+    e : "oO",
+    T : "U "
+}));
 });
